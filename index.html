@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>ChatNest</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="profile.css" />
+</head>
+<body>
+  <div id="login">
+    <input type="email" id="email" placeholder="Email">
+    <input type="password" id="password" placeholder="Password">
+    <button onclick="login()">Login</button>
+    <button onclick="signup()">Signup</button>
+  </div>
+
+  <div id="chat" style="display:none;">
+    <div id="profile">
+      <img id="profile-pic" src="assets/default-profile.png" alt="Profile Picture">
+      <input type="file" id="upload-pic" accept="image/*">
+      <button onclick="logout()">Logout</button>
+    </div>
+    <div id="messages"></div>
+    <input type="text" id="message" placeholder="Type a message">
+    <button onclick="sendMessage()">Send</button>
+    <div id="emoji-picker"></div>
+  </div>
+
+  <script type="module" src="firebase-config.js"></script>
+  <script type="module" src="script.js"></script>
+  <script src="emoji-picker.js"></script>
+</body>
+</html>
