@@ -1,17 +1,98 @@
 body {
-  font-family: Arial, sans-serif;
-  padding: 20px;
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(to right, #2c3e50, #3498db);
+  color: white;
 }
 
-#login, #chat {
-  max-width: 500px;
-  margin: auto;
+.container {
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
 }
 
-#messages {
-  border: 1px solid #ccc;
-  height: 300px;
-  overflow-y: scroll;
-  padding: 10px;
+.auth-card, .chat-box {
+  background: white;
+  color: #333;
+  padding: 30px;
+  border-radius: 16px;
+  box-shadow: 0 0 25px rgba(0,0,0,0.1);
+  width: 90%;
+  max-width: 400px;
+}
+
+.auth-card h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+input[type="email"],
+input[type="password"],
+input[type="text"] {
+  width: 100%;
+  padding: 12px;
   margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+.auth-buttons {
+  display: flex;
+  justify-content: space-between;
+}
+
+.auth-buttons button,
+.chat-input button,
+.logout-btn {
+  padding: 10px 16px;
+  border: none;
+  border-radius: 8px;
+  background-color: #3498db;
+  color: white;
+  cursor: pointer;
+}
+
+.chat-box {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 600px;
+  height: 90vh;
+}
+
+.chat-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.chat-users {
+  margin: 10px 0;
+  font-size: 14px;
+  color: #555;
+}
+
+.chat-messages {
+  flex: 1;
+  overflow-y: auto;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 10px;
+  background: #f9f9f9;
+  color: #000;
+  margin-bottom: 10px;
+}
+
+.chat-messages p {
+  margin: 6px 0;
+}
+
+.chat-input {
+  display: flex;
+  gap: 10px;
+}
+
+.chat-input input {
+  flex: 1;
 }
